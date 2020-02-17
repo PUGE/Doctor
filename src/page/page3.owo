@@ -1,0 +1,78 @@
+<template lang="pug">
+.page-3
+  img.so-1(src="@|main.jpg|")
+  img.so-6(src="@|page3-6.png|")
+  //- 返回首页
+  img.so-5(src="@|page3-5.png|" go page="page1" ani="moveToRight/moveFromLeft/moveToLeft/moveFromRight")
+  img.so-4(src="@|page3-4.png|" go page="page2" ani="moveToRight/moveFromLeft/moveToLeft/moveFromRight")
+  img.so-3(src="@|page3-3.png|" go page="page4" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft")
+  .more(o-tap="location.replace('http://www.people.com.cn/')")
+</template>
+
+<script>
+module.exports = {
+  created: function () {
+    owo.tool.touch({
+      el: this.$el,
+      end: (e) => {
+        if (e.swipe[0] > 100) {
+          owo.go({
+            page: "page2",
+            noBack: true,
+            ani: "moveToRight/moveFromLeft/moveToLeft/moveFromRight"
+          })
+        } else if (e.swipe[0] < -100) {
+          owo.go({
+            page: "page4",
+            noBack: true,
+            ani: "moveToLeft/moveFromRight/moveToRight/moveFromLeft"
+          })
+        }
+      }
+    })
+  }
+}
+</script>
+
+<style lang="less">
+.so-1 {
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+  top: 0px
+}
+.so-6 {
+  position: absolute;
+  left: 450px;
+  z-index: 6;
+  top: 926px
+}
+.so-5 {
+  position: absolute;
+  left: 81px;
+  z-index: 5;
+  top: 1308px
+}
+.so-4 {
+  position: absolute;
+  left: 313px;
+  z-index: 4;
+  top: 1310px
+}
+.so-3 {
+  position: absolute;
+  left: 529px;
+  z-index: 3;
+  top: 1308px
+}
+.more {
+  position: absolute;
+  left: 547px;
+  z-index: 2;
+  top: 1226px;
+  width: 125px;
+  height: 22px;
+  display: block;
+  background-image: url("@|page3-2.png|");
+}
+</style>

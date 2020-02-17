@@ -1,0 +1,52 @@
+<template lang="pug">
+.page-2
+  img.so-4(src="@|page2-4.png|")
+  img.so-3(src="@|page2-3.png|" o-tap="next")
+  .so-2#textBox
+</template>
+
+<script>
+module.exports = {
+  created: function () {
+    // owo.tool.typing(owo.id.textBox, '')
+  },
+  next: function () {
+    owo.state.typing = false
+    owo.go({
+      page: "page3",
+      noBack: true,
+      ani: "moveToLeft/moveFromRight/moveToRight/moveFromLeft"
+    })
+  }
+}
+</script>
+
+<style lang="less">
+.page-2 {
+  background-image: url('@|page2.jpg|');
+}
+.so-4 {
+  position: absolute;
+  left: 78px;
+  z-index: 4;
+  top: 156px
+}
+.so-3 {
+  position: absolute;
+  left: 539px;
+  z-index: 3;
+  top: 1292px
+}
+.so-2 {
+  position: absolute;
+  left: 81px;
+  z-index: 2;
+  top: 284px;
+  font-size: 40px;
+  line-height: 60px;
+  color: white;
+  width: 592px;
+  height: 942px;
+  background-image: url('@|page2-2.png|');
+}
+</style>

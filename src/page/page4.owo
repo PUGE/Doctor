@@ -1,0 +1,56 @@
+<template lang="pug">
+.page-4
+  //- 用户看到的最后一页
+  img.so-2(src="@|page3.jpg|")
+  //- 实际保存的海报
+  img.show(src="@|show.jpg|")
+  img.so-3(src="@|page4-3.png|" o-tap="location.replace('')")
+  img.so-4(src="@|page4-4.png|")
+</template>
+
+<script>
+module.exports = {
+  created: function () {
+    owo.tool.touch({
+      el: this.$el,
+      end: (e) => {
+        if (e.swipe[0] > 100) {
+          owo.go({
+            page: "page3",
+            noBack: true,
+            ani: "moveToRight/moveFromLeft/moveToLeft/moveFromRight"
+          })
+        }
+      }
+    })
+  }
+}
+</script>
+
+<style lang="less">
+.so-2 {
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+  top: 0px
+}
+.so-3 {
+  position: absolute;
+  left: 88px;
+  z-index: 13;
+  top: 1273px
+}
+.so-4 {
+  position: absolute;
+  left: 388px;
+  z-index: 4;
+  top: 1273px
+}
+.show {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+</style>

@@ -1,0 +1,391 @@
+body, html, .page, .page-box {
+  padding: 0;
+  margin: 0;
+}
+
+.owo-animation {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.owo-animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owo-animation-forward {
+  z-index: 99;
+}
+
+img {
+  border: none;
+}
+
+/* 清除浮动 */
+.clear:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.loading-box {
+  background-image: url('../resource/page2.jpg');
+}
+
+.loading-box .loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -16%;
+  bottom: 0;
+  margin: auto;
+}
+
+.loading-box .loading-bar {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  height: 14px;
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.loading-box .num-bar {
+  background-color: #58b3dd;
+  height: 14px;
+  border-radius: 7px;
+  width: 0%;
+}
+
+.loading-box .num,
+.loading-box .text {
+  position: absolute;
+  top: 0%;
+  bottom: -8%;
+  margin: auto;
+  line-height: 50px;
+  height: 50px;
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.loading-box .text {
+  bottom: -14%;
+}.owo-animation-shrink {
+  -webkit-animation: shrink 1s linear alternate infinite;
+  animation: shrink 1s linear alternate infinite;
+}
+@-webkit-keyframes shrink{
+  0%{-webkit-transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);}
+}
+@keyframes shrink{
+  0%{-webkit-transform:scale(0.9);transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);transform:scale(1);}
+}
+
+.page-1 {
+  background-image: url('../resource/page1.jpg');
+}
+
+.page-1 .so-4 {
+  position: absolute;
+  left: 240px;
+  z-index: 4;
+  top: 1227px;
+}
+.page-2 {
+  background-image: url('../resource/page2.jpg');
+}
+
+.page-2 .so-4 {
+  position: absolute;
+  left: 78px;
+  z-index: 4;
+  top: 156px;
+}
+
+.page-2 .so-3 {
+  position: absolute;
+  left: 539px;
+  z-index: 3;
+  top: 1292px;
+}
+
+.page-2 .so-2 {
+  position: absolute;
+  left: 81px;
+  z-index: 2;
+  top: 284px;
+  font-size: 40px;
+  line-height: 60px;
+  color: white;
+  width: 592px;
+  height: 942px;
+  background-image: url('../resource/page2-2.png');
+}
+.page-3 .so-1 {
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+  top: 0px;
+}
+
+.page-3 .so-6 {
+  position: absolute;
+  left: 450px;
+  z-index: 6;
+  top: 926px;
+}
+
+.page-3 .so-5 {
+  position: absolute;
+  left: 81px;
+  z-index: 5;
+  top: 1308px;
+}
+
+.page-3 .so-4 {
+  position: absolute;
+  left: 313px;
+  z-index: 4;
+  top: 1310px;
+}
+
+.page-3 .so-3 {
+  position: absolute;
+  left: 529px;
+  z-index: 3;
+  top: 1308px;
+}
+
+.page-3 .more {
+  position: absolute;
+  left: 547px;
+  z-index: 2;
+  top: 1226px;
+  width: 125px;
+  height: 22px;
+  display: block;
+  background-image: url("../resource/page3-2.png");
+}
+.page-4 .so-2 {
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+  top: 0px;
+}
+
+.page-4 .so-3 {
+  position: absolute;
+  left: 88px;
+  z-index: 13;
+  top: 1273px;
+}
+
+.page-4 .so-4 {
+  position: absolute;
+  left: 388px;
+  z-index: 4;
+  top: 1273px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.page-4 .show {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.music-menu .music-icon {
+  position: absolute;
+  right: 10px;
+  top: 10%;
+  width: 67px;
+  height: 67px;
+  z-index: 999;
+}
+
+.music-menu .active {
+  -webkit-animation: musicturn 12s linear infinite;
+          animation: musicturn 12s linear infinite;
+}
+
+@-webkit-keyframes musicturn {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes musicturn {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* 页面切换动画 */
+
+.o-page-moveToLeft {
+	-webkit-animation: moveToLeft .6s ease both;
+	-moz-animation: moveToLeft .6s ease both;
+	animation: moveToLeft .6s ease both;
+}
+
+@-webkit-keyframes moveToLeft {
+	to { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveToLeft {
+	to { -moz-transform: translateX(-100%); }
+}
+@keyframes moveToLeft {
+	to { transform: translateX(-100%); }
+}
+.o-page-moveFromRight {
+	-webkit-animation: moveFromRight .6s ease both;
+	-moz-animation: moveFromRight .6s ease both;
+	animation: moveFromRight .6s ease both;
+}
+
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveFromRight {
+	from { -moz-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { transform: translateX(100%); }
+}
+.o-page-moveToRight {
+	-webkit-animation: moveToRight .6s ease both;
+	-moz-animation: moveToRight .6s ease both;
+	animation: moveToRight .6s ease both;
+}
+
+@-webkit-keyframes moveToRight { 
+	to { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveToRight { 
+	to { -moz-transform: translateX(100%); }
+}
+@keyframes moveToRight { 
+	to { transform: translateX(100%); }
+}
+.o-page-moveFromLeft {
+	-webkit-animation: moveFromLeft .6s ease both;
+	-moz-animation: moveFromLeft .6s ease both;
+	animation: moveFromLeft .6s ease both;
+}
+
+@-webkit-keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveFromLeft {
+	from { -moz-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+	from { transform: translateX(-100%); }
+}
+
+
+/* 这个文件里写的是全局样式,在各个页面都生效 */
+body, html, .page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: text;
+  font: normal 12px/180% "SimSun";
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+html {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+h1, h2, h3, h4, h5, input {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td{
+  margin: 0;
+  padding: 0;
+}
+
+.clear:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}

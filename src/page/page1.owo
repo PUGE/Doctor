@@ -1,0 +1,25 @@
+<template lang="pug">
+.page-1
+  img.so-4(src="@|page1-4.png|" o-animation="shrink" go page="page2" ani="moveToLeft/moveFromRight/moveToRight/moveFromLeft")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+.page-1 {
+  background-image: url('@|page1.jpg|');
+}
+.so-4 {
+  position: absolute;
+  left: 240px;
+  z-index: 4;
+  top: 1227px
+}
+</style>
